@@ -1,0 +1,50 @@
+from nltk.chat.util import Chat, reflections
+
+
+pairs = [
+    [
+        r"my name is (.*)",
+        ["Hello %1, How are you today?",]
+    ],
+    [
+        r"what is your name?",
+        ["My name is Chat the chat boy, nice to meet you pal",]
+    ],
+    [
+        r"How are you?",
+        ["Im doing good \n How about you?",]
+    ],
+    [
+        r"sorry (.*)",
+        ["its alright", "Its OK, never mind",]
+    ],
+    [
+        r"im  doing good",
+        ["Nice to hear that", "Alrighty then"]
+    ],
+    [
+        r"(.*) age?|how old are you?",
+        ["Im a computer program dude \n Seriously you're asking me this?"]
+    ],
+    [
+        r"What (.*) want",
+        ["Make me an offer I cant refuse"]
+
+    ],
+    [
+        r"quit",
+        ["Bye bye, see you soon|"]
+    ],
+]
+
+def chattyboy():
+    #Mensaje inicial para dar instrucciones y presentarse.
+    print("Hello im Chat the chat boy!\n  Plase type lowercase English languaje to start conversation, Type quit to leave")
+
+
+    chat = Chat(pairs, reflections)
+    chat.converse()
+
+
+
+chattyboy()
