@@ -1,6 +1,6 @@
 from nltk.chat.util import Chat, reflections
 
-
+#Aqui definimos las pŕeguntas y posibles respuestas
 pairs = [
     [
         r"my name is (.*)",
